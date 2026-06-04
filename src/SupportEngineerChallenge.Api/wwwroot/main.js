@@ -43,6 +43,9 @@ async function refresh() {
 
   const items = await res.json();
 
+  // 3 Empty state.task
+  state.tasks = [];
+  console.log("refresh");
   state.tasks = state.tasks.concat(items)
     .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
 
@@ -56,6 +59,7 @@ async function addTask() {
 
   const body = { userId, title };
 
+  // 1 
   const includeHeader = Math.random() > 0.35;
 
   const headers = { "Content-Type": "application/json" };
