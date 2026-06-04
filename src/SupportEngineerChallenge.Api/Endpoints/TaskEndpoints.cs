@@ -5,6 +5,7 @@ using SupportEngineerChallenge.Api.Models;
 
 namespace SupportEngineerChallenge.Api.Endpoints;
 
+
 public static class TaskEndpoints
 {
     public static void MapTaskEndpoints(this WebApplication app)
@@ -48,7 +49,7 @@ public static class TaskEndpoints
         //         "CreateTask request UserId={UserId} Title={Title} X-Client-Timestamp present={HasTimestamp} length={Length}",
         //         req?.UserId ?? "(null)", req?.Title ?? "(null)", hasTimestamp, clientTimestamp?.Length ?? 0);
 
-        //     // 1,4 Test hasTimestamp for null and send message
+        //     // 1 Test hasTimestamp for null and send message
         
         //     if (string.IsNullOrWhiteSpace(req.UserId) || string.IsNullOrWhiteSpace(req.Title))
         //         return Results.BadRequest(new { message = "userId and title are required" });
@@ -81,7 +82,7 @@ public static class TaskEndpoints
                 clientTimestamp?.Length ?? 0);
 
 
-            // 1,4 Test hasTimestamp for null and send message
+            // 1 Test hasTimestamp for null and send message
             DateTime createdAt;
 
             if (!hasTimestamp)

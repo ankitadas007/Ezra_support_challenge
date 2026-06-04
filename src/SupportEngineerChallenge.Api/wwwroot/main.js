@@ -43,14 +43,16 @@ async function refresh() {
 
   const items = await res.json();
 
-  // 3 Empty state.task
-  state.tasks = [];
-  console.log("refresh");
-  state.tasks = state.tasks.concat(items)
-    .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
+  // 3 concatenating state.task
+
+  state.tasks = items.sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
+
+  // state.tasks = state.tasks.concat(items)
+  //   .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
 
   render();
 }
+
 
 async function addTask() {
   setError("");

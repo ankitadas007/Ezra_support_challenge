@@ -127,21 +127,3 @@ The issue affects multiple users and degrades the user experience but does not p
 * Investigate and correct frontend state management logic in `main.js`.
 * Add diagnostic logging around refresh operations and state updates.
 * Add monitoring to detect duplicate task IDs or abnormal refresh behavior.
-
-• Title + description:
-    -Clicking on ‘Refresh’ button is adding duplicate entries on application page
-• Priority/severity and rationale
-    -Severity 3 as it is across multiple users but is not hampering working of the application
-• Acceptance criteria
-    -Reproduction steps no longer trigger the issue.
-    -No regressions are introduced to existing functionality.
-    -Appropriate logging/monitoring is added (if required).
-    -Automated tests are added or updated.
-    -Code passes CI/CD validation and code review.
-• Notes/context (monitoring, tests, refactors, etc.)
-    -The bug is in the frontend, so create an API test that confirms the backend never returns duplicate IDs, proving the fix belongs in main.js.
-    -More log lines should be added for every data entry
-    -Then log level monitoring can be added to catch duplicates
-
-
-p
