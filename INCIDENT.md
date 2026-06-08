@@ -10,6 +10,7 @@
 
 * Some users submitted invalid or incomplete data and received a generic HTTP 500 error instead of a clear validation message.
 * Users were unable to create tasks in affected scenarios.
+![image1](/artifacts/Screenshots/Screenshot%202026-06-08%20at%203.21.56 PM.png)
 
 ### Detection
 
