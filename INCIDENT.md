@@ -23,8 +23,10 @@
 
 ### Root Cause
 
-* The application did not properly handle missing or invalid timestamp values.
+* The application did not properly handle missing or invalid timestamp values in “TaskEndpoints.cs” .
 * A null or invalid timestamp could result in an unhandled exception, causing the API to return an HTTP 500 error.
+
+![image2](/artifacts/Screenshots/Screenshot%202026-06-08%20at%203.22.35 PM.png)
 
 ### Mitigation / Resolution
 
@@ -36,6 +38,9 @@
 * The fix was validated in the test environment.
 * Regression testing confirmed task creation succeeds with valid, missing, empty, and invalid timestamps.
 * The change was reviewed and deployed to production through the standard Git deployment process.
+
+![image3](/artifacts/Screenshots/Screenshot%202026-06-08%20at%203.22.45 PM.png)
+![image4](/artifacts/Screenshots/Screenshot%202026-06-08%20at%203.22.23 PM.png)
 
 ### Follow-up Actions
 
