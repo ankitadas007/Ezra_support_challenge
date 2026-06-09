@@ -10,7 +10,7 @@
 
 * Some users submitted invalid or incomplete data and received a generic HTTP 500 error instead of a clear validation message.
 * Users were unable to create tasks in affected scenarios.
-![image1](/artifacts/Screenshots/Screenshot%202026-06-08%20at%203.21.56 PM.png)
+![image1](/artifacts/Screenshots/Task1/Screenshot%202026-06-08%20at%203.21.56 PM.png)
 
 ### Detection
 
@@ -26,7 +26,8 @@
 * The application did not properly handle missing or invalid timestamp values in “TaskEndpoints.cs” .
 * A null or invalid timestamp could result in an unhandled exception, causing the API to return an HTTP 500 error.
 
-![image2](/artifacts/Screenshots/Screenshot%202026-06-08%20at%203.22.35 PM.png)
+![image2](/artifacts/Screenshots/Task1/Screenshot%202026-06-08%20at%203.22.35 PM.png)
+![image2](/artifacts/Screenshots/Task1/Screenshot%202026-06-08%20at%203.22.35 PM.png)
 
 ### Mitigation / Resolution
 
@@ -39,8 +40,8 @@
 * Regression testing confirmed task creation succeeds with valid, missing, empty, and invalid timestamps.
 * The change was reviewed and deployed to production through the standard Git deployment process.
 
-![image3](/artifacts/Screenshots/Screenshot%202026-06-08%20at%203.22.45 PM.png)
-![image4](/artifacts/Screenshots/Screenshot%202026-06-08%20at%203.22.23 PM.png)
+![image3](/artifacts/Screenshots/Task1/Screenshot%202026-06-08%20at%203.22.45 PM.png)
+![image4](/artifacts/Screenshots/Task1/Screenshot%202026-06-08%20at%203.22.23 PM.png)
 
 ### Follow-up Actions
 
@@ -59,6 +60,8 @@
 
 * Some users experienced slow page refreshes when retrieving task data.
 * The issue negatively impacted user experience but did not prevent application use.
+![image5](/artifacts/Screenshots/Task2/Screenshot%202026-06-08%20at%204.56.18 PM.png)
+![image6](/artifacts/Screenshots/Task2/Screenshot%202026-06-08%20at%204.56.26 PM.png)
 
 ### Detection
 
@@ -73,10 +76,14 @@
 
 * Task sorting was performed in application memory after retrieving records from the database.
 * This resulted in unnecessary processing and increased response times.
+![image7](/artifacts/Screenshots/Task2/Screenshot%202026-06-08%20at%204.56.45 PM.png)
 
 ### Mitigation / Resolution
 
 * Updated the query to perform filtering, sorting, and limiting directly at the database level.
+
+![image8](/artifacts/Screenshots/Task2/Screenshot%202026-06-08%20at%204.56.54 PM.png)
+![image9](/artifacts/Screenshots/Task2/Screenshot%202026-06-08%20at%204.57.03 PM.png)
 
 ### Verification
 
