@@ -37,8 +37,9 @@
 ### Verification
 
 * The fix was validated in the test environment.
-* Regression testing confirmed task creation succeeds with valid, missing, empty, and invalid timestamps.
+* Follow up ticket will have guidelines to create a test. I tested by rerunning the code. Testing confirmed task creation succeeds with valid, missing, empty, and invalid timestamps.
 * The change was reviewed and deployed to production through the standard Git deployment process.
+
 
 ![image3](/artifacts/Screenshots/Task1/Screenshot%202026-06-08%20at%203.22.45 PM.png)
 ![image4](/artifacts/Screenshots/Task1/Screenshot%202026-06-08%20at%203.22.23 PM.png)
@@ -47,6 +48,7 @@
 
 * Create a follow-up ticket to determine why defensive null handling was absent and identify whether additional validation improvements are required.
 * Review API input validation patterns across similar endpoints.
+* Create a test which will confirm task creation returns 201 whether the timestamp header is valid, missing, empty, or invalid with invalid values falling back to server time. Blank userId/title now returns a 400 instead of a 500
 
 ---
 
@@ -88,7 +90,7 @@
 ### Verification
 
 * The fix was validated in the test environment.
-* Functional testing confirmed no change in returned results.
+* Follow up ticket will have guidelines to create a test. I tested by rerunning the code. Testing confirmed no change in returned results.
 * Average refresh time decreased from over 150 ms to under 10 ms.
 * The change was deployed to production through the standard Git deployment process.
 
@@ -96,6 +98,7 @@
 
 * Review other endpoints for similar in-memory processing patterns.
 * Add monitoring and performance thresholds to identify future query regressions.
+* Create tests that confirm the DB-level rewrite didn't change behavior: results are filtered to the requested user, sorted newest first, and the limit is respected and capped at 200.
 
 ---
 
