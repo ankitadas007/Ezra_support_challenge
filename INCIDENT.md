@@ -109,6 +109,8 @@
 
 * Some users observed duplicate task entries after repeatedly clicking the Refresh button.
 * Task ordering could become inconsistent, leading to confusion.
+![image10](/artifacts/Screenshots/Task3/Screenshot%202026-06-08%20at%205.10.37 PM.png)
+![image11](/artifacts/Screenshots/Task3/Screenshot%202026-06-08%20at%205.10.44 PM.png)
 
 ### Detection
 
@@ -128,6 +130,9 @@
 
 * Updated the frontend refresh logic to replace the existing task collection with the latest API response.
 * Added safeguards to prevent duplicate task IDs from being displayed.
+
+![image12](/artifacts/Screenshots/Task3/Screenshot%202026-06-08%20at%205.10.55 PM.png)
+![image13](/artifacts/Screenshots/Task3/Screenshot%202026-06-08%20at%205.10.57 PM.png)
 
 ### Verification
 
