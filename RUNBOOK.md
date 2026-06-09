@@ -73,6 +73,7 @@ to identify performance bottlenecks.
 #### How to Diagnose
 
 1. Review application logs for error messages and exceptions.
+![image1](/artifacts/Screenshots/Task1/Screenshot%202026-06-08%20at%203.22.23 PM.png)
 2. Search for `CreateTask request` entries around the time of the incident.
 3. Verify whether the request contains:
 
@@ -108,6 +109,7 @@ to identify performance bottlenecks.
 #### How to Diagnose
 
 1. Review logs for `ListTasks completed` entries.
+![image1](/artifacts/Screenshots/Task2/Screenshot%202026-06-08%20at%204.56.38 PM.png)
 2. Identify requests with unusually high `elapsedMs` values.
 3. Correlate slow requests with:
 
